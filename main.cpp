@@ -26,10 +26,10 @@ public:
         return r;
     }
     Student& operator=(Student& s){
-        s.name = this->name;
-        s.rates = getRates();
+        this->name = s.name;
+        this->rates = s.getRates();
         delete getRates();
-        return s;
+        return *this;
     }
 };
 
